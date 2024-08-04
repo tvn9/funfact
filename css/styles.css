@@ -1,0 +1,65 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #292524;
+   color: #fafaf9;
+   font-family: "Sono", monospace, system-ui;
+   padding: 40px;
+}
+
+h1 {
+   font-size: 42px;
+   text-transform: uppercase;
+   font-family: "Coiny", system-ui;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.fact-form {
+   background-color: #57534e;
+   margin-bottom: 40px;
+   padding: 16px 40px;
+}
+
+.fact {
+   background-color: #57534e;
+   font-size: 16px;
+   line-height: 1.4;
+   font-weight: 400;
+   font-style: normal;
+   margin-bottom: 16px;
+   padding: 16px 24px;
+   letter-spacing: -1px;
+
+   display: flex;
+   align-items: center;
+}
+
+.tag {
+   text-transform: uppercase;
+   font-size: 14px;
+   font-family: "Coiny", system-ui;
+   font-weight: 400;
+   font-style: normal;
+   padding: 6px 5px 3px 5px;
+   border-radius: 5px;
+}
+
+.vote-btn {
+   display: flex;
+   margin-left: auto;
+}
+
+button {
+   display: flex;
+   padding: 2px;
+   margin-left: 5px;
+}
+
+ul {
+   list-style: none;
+}
