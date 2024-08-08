@@ -13,39 +13,49 @@
 
 <body>
 	<div class="container">
+<!-- /* Home page header block */ -->
 		<header>
 			<img class="logo" src="./images/logo.png" alt="Fun fact logo image" />
 			<h1 class="fun-fact">Fun Fact!</h1>
-			<button class="share-post-btn">Share a fact</button>
+			<button class="btn share-fact">Share a fact</button>
 		</header>
+		<!-- End of Home page header blocK -->
 
+		<!-- Form block -->
 		<form action="" class="fact-form">
 			<input type="text" placeholder="Share a fact with the world..." /> <span>200</span>
 			<input type="text" placeholder="Trust worthy source..." />
-			<select name="" id="">
+			<select class="btn category" name="" id="">
 				<option value="">Choose category:</option>
 				<option value="technology">Technology</option>
 				<option value="science">Science</option>
 				<option value="finance">Finance</option>
 				<option value="society">Society</option>
 			</select>
-			<button>Post</button>
+			<button class="btn btn-post">Post</button>
 		</form>
+		<!-- End of Form block -->
 		<main class="main-layout">
 			<aside>
-				<ul class="catergory-btn">
-					<li><button>All</button></li>
+				<ul class="catergory">
+					<li><button class="btn btn-all">All</button></li>
 					<li>
-						<button>Technology</button>
+						<button class="btn btn-technology">Technology</button>
 					</li>
 					<li>
-						<button>Science</button>
+						<button class="btn btn-science">Science</button>
 					</li>
 					<li>
-						<button>Finance</button>
+						<button class="btn btn-finance">Finance</button>
 					</li>
 					<li>
-						<button>Society</button>
+						<button class="btn btn-health">Health</button>
+					</li>
+					<li>
+						<button class="btn btn-history">History</button>
+					</li>
+					<li>
+						<button class="btn btn-news">News</button>
 					</li>
 				</ul>
 			</aside>
@@ -54,27 +64,27 @@
 					<li class="fact">
 						<p>
 							React is being developed by Meta (formerly facebook)
-							<a href="https://opensource.fb.com/" target="_blank">(Source)</a>
+							<a class="source" href="https://opensource.fb.com/" target="_blank">(Source)</a>
 							<span class="tag" style="background-color: #3b82f6">#technology#</span>
 						</p>
-						<div class="vote-group-btn">
-							<button>👍 <strong>24</strong></button>
-							<button>🤯 <strong>9</strong></button>
-							<button>⛔️ <strong>4</strong></button>
+						<div class="vote-group">
+							<button class="btn vote">👍 24</button>
+							<button class="btn vote">🤯 9</button>
+							<button class="btn vote">⛔️ 4</button>
 						</div>
 					</li>
 					<li class="fact">
 						<p>
 							text: "Millennial dads spend 3 times as much time with their kids than their fathers spent with them.
 							In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%",
-							<a href="https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids"
+							<a class="source" href="https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids"
 								target="_blank">(Source)</a>
 							<span class="tag" style="background-color: #eab308;">#society#</span>
 						</p>
-						<div class="vote-group-btn">
-							<button>👍<strong>11</strong></button>
-							<button>🤯<strong>2</strong></button>
-							<button>⛔️<strong>0</strong></button>
+						<div class="vote-group">
+							<button class="btn vote">👍 11</button>
+							<button class="btn vote">🤯 2</button>
+							<button class="btn vote">⛔️ 0</button>
 						</div>
 					</li>
 				</ul>
