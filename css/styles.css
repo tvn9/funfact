@@ -8,6 +8,7 @@ body {
    background-color: #292524;
    color: #fafaf9;
    font-family: "Sono", monospace, system-ui;
+   font-weight: 400;
    padding: 40px 60px; 
 }
 
@@ -22,6 +23,7 @@ body {
    text-transform: uppercase;
    color: inherit;
    transition: 0.3s;
+   cursor: pointer;
 }
 
 .btn:hover {
@@ -71,18 +73,29 @@ header {
 /* FORM */
 .fact-form {
    display: flex;
-   flex-wrap: nowrap;
    align-items: center;
-   gap: 10px;
-   padding: 20px 40px;
+   flex-wrap: nowrap;
+   padding: 20px;
+   gap: 20px;
    background-color: #363433;
    margin-bottom: 40px;
-   border-radius: 10px;
+   border-radius: 20px;
 }
 
-.fact-form-group input {
-   background-color: #78716c;
+.fact-form-group1 {
+   flex-direction: row;
    flex-wrap: nowrap;
+   flex-grow: 1;
+}
+
+.fact-form-group1 input {
+   width: 90%;
+}
+
+.fact-form-group1 input,
+.fact-form-group2 input,
+.fact-form-group2 select {
+   background-color: #78716c;
    border: none;
    border-radius: 20px;
    padding: 10px;
@@ -91,9 +104,6 @@ header {
    font-size: 17px;
 }
 
-.fact-form-group input {
-   flex-grow: 1;
-}
 
 .btn-post {
    padding: 12px 20px 8px;
@@ -112,7 +122,7 @@ header {
 }
 
 /* Aside Block */
-.categories {
+.btn-categories {
    font-size: 17px;
 }
 
@@ -120,12 +130,12 @@ ul {
    list-style: none;
 }
 
-.categories li .btn{
+.btn-categories li .btn { 
    width: 100%;
    margin-bottom: 10px;
 }
 
-.categories li .btn-all {
+.btn-categories li .btn-all {
    margin-bottom: 15px;
    background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308 );
 }
@@ -169,6 +179,8 @@ ul {
 .fact {
    display: flex;
    align-items: center;
+   flex-wrap: nowrap;
+   gap: 20px;
    background-color: #363433;
    font-size: 17px;
    line-height: 1.4;
@@ -177,38 +189,41 @@ ul {
    margin-bottom: 16px;
    padding: 16px 24px;
    letter-spacing: -1px;
-   
-   border-radius: 10px;
+   border-radius: 20px;
 }
 
 .tag {
    text-transform: uppercase;
-   font-size: 14px;
    font-family: "Coiny", system-ui;
+   font-size: 15px;
    font-weight: 400;
    font-style: normal;
-   padding: 6px 5px 3px 5px;
-   border-radius: 5px;
+   padding: 5px 10px 2px;
+   margin-left: auto;
+   border-radius: 100px;
 }
 
 .vote-group {
+   display: flex;
+   flex-shrink: 0;
    gap: 5px;
    margin-left: auto;
 }
 
 .vote {
    background-color: #78716c;
-   font-family: "Sono", monospace, system-ui;
-   font-size: 17px;
+   font-family: inherit;
+   font-size: inherit;
    font-weight: 600;
-   flex-shrink: 1;
-   padding: 5px;
+   padding: 3px 10px;
+   border: none;
+   border-radius: 100px;
    color: inherit;
    cursor: pointer;
 }
 
 .vote:hover {
-   background-color: #363433;
+   background-color: #292524;
    transition: .3s;
 }
 
@@ -228,22 +243,84 @@ ul {
    color: #3b82f6;
 }
 
-/* screen width below 1000px */
-@media (max-width: 1100px) {
-   .fact-form-group input {
-      gap: 10px;
-      flex-wrap: nowrap;
+/* screen width below 1200px */
+@media (max-width: 1200px) {
+   body {
+      padding: 20px 30px;
+      font-size: 15px;
    }
 
-   
+   .fact {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+   }
 }
 
 @media (max-width: 1000px) {
-   .fact-form-group input {
+   .main-layout {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 30px;
+   }
+   
+   .h1-title {
+      font-size: 25px;
+   }
+   
+   .btn-share-fact {
+      font-size: 20px;
+   }
+     
+   .btn-post {
+      font-size: 16px;
+   }
+   
+   .btn-categories li .btn {
+      font-size: 15px;
+   }
+   
+   .fact {
+      font-size: 16px;
+   }
+   .fact-form {
+      flex-direction: column;
+      gap: 20px;
+   }
+   
+   .btn-categories li .btn { 
+      width: 100%;
+      margin-bottom: 10px;
+   }
+   
+   .fact-form-group1,
+   .fact-form-group2 {
+      display: flex;
+      flex-direction: row;
+      flex-shrink: 0;;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+   }
+   
+   .fact-form-group1 input,
+   .fact-form-group2 input,
+   .fact-form-group2 select {
+      width: 100%;
+      font-size: 15px;
+   }
+   .btn-post {
+      width: 50%;
+      font-size: 15px;
+   }
+   .tag {
+      font-size: 13px;
    }
 
-
-   
+   @media (max-width: 900px) {
+      .main-layout {
+         grid-template-columns: 1fr;
+      }
+   }
 }
-
-
