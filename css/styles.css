@@ -82,19 +82,8 @@ header {
    border-radius: 20px;
 }
 
-.fact-form-group1 {
-   flex-direction: row;
-   flex-wrap: nowrap;
-   flex-grow: 1;
-}
-
-.fact-form-group1 input {
-   width: 90%;
-}
-
-.fact-form-group1 input,
-.fact-form-group2 input,
-.fact-form-group2 select {
+.fact-form input,
+.fact-form select {
    background-color: #78716c;
    border: none;
    border-radius: 20px;
@@ -104,6 +93,9 @@ header {
    font-size: 17px;
 }
 
+.fact-form input:first-child {
+   flex-grow: 1;
+}
 
 .btn-post {
    padding: 12px 20px 8px;
@@ -253,7 +245,6 @@ ul {
    .fact {
       flex-direction: column;
       gap: 12px;
-      align-items: flex-start;
    }
 }
 
@@ -283,35 +274,23 @@ ul {
    .fact {
       font-size: 16px;
    }
+
    .fact-form {
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
    }
-   
+
+   .fact-form input,
+   .fact-form select {
+      width: 100%;
+   }
+
    .btn-categories li .btn { 
       width: 100%;
-      margin-bottom: 10px;
    }
    
-   .fact-form-group1,
-   .fact-form-group2 {
-      display: flex;
-      flex-direction: row;
-      flex-shrink: 0;;
-      flex-wrap: nowrap;
-      align-items: center;
-      gap: 10px;
-      width: 100%;
-   }
-   
-   .fact-form-group1 input,
-   .fact-form-group2 input,
-   .fact-form-group2 select {
-      width: 100%;
-      font-size: 15px;
-   }
    .btn-post {
-      width: 50%;
+      min-width: 20%;
       font-size: 15px;
    }
    .tag {
@@ -321,6 +300,20 @@ ul {
    @media (max-width: 900px) {
       .main-layout {
          grid-template-columns: 1fr;
+      }
+
+      .logo {
+         width: 50px;
+         height: 50px;
+      }
+
+      .h1-title {
+         font-size: 25px;
+      }
+
+      .btn-share-fact {
+         font-size: 16px;
+         padding: 10px 15px 7px;
       }
    }
 }
