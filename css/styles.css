@@ -103,6 +103,10 @@ header {
    background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308 );
 }
 
+.hidden {
+   display: none;
+}
+
 /* End of FORM */
 
 /* MAIN CONTENT */
